@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+hts-cache/
+daveholloway.uk/
+brain_extracted/
+_skill_temp/
+brain.md
+codebase-brain.zip
+hts-log.txt
+universal-design*
