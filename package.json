@@ -1,0 +1,6 @@
+{
+  "name": "rishit-portfolio",
+  "scripts": {
+    "build": "echo \"No build needed\""
+  }
+}
