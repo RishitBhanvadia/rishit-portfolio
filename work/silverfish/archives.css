@@ -1,0 +1,180 @@
+:root {
+  --mockup-bg: #1a1a1a;
+  --mockup-radius: 40px;
+  --mockup-border: 12px;
+  --watch-btn-bg: #000;
+  --watch-btn-color: #fff;
+  --modal-backdrop: rgba(0, 0, 0, 0.95);
+}
+
+.archives-section {
+  width: 100%;
+  padding: 8vw 4vw;
+  background-color: var(--color-secondary, #f04d3c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+}
+
+.archives-title {
+  font-family: var(--heading-font, "Inter", sans-serif);
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.archives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4vw;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.mockup-frame {
+  position: relative;
+  aspect-ratio: 9 / 19;
+  background-color: var(--mockup-bg);
+  border-radius: var(--mockup-radius);
+  border: var(--mockup-border) solid #000;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+.mockup-frame:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.mockup-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.mockup-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mockup-body {
+  flex: 1;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mockup-media-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mockup-media-container video,
+.mockup-media-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mockup-text {
+  flex: 1;
+}
+
+.mockup-text h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  line-height:1.2;
+}
+
+.mockup-text p {
+  font-size: 14px;
+  color: #666;
+}
+
+.watch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: var(--watch-btn-bg);
+  color: var(--watch-btn-color);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.watch-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Video Modal Styles */
+.video-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--modal-backdrop);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(20px);
+  padding: 40px;
+}
+
+.video-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  aspect-ratio: 16 / 9;
+  transform: scale(0.9);
+}
+
+.video-modal-container video {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .archives-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
