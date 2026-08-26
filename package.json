@@ -2,5 +2,8 @@
   "name": "rishit-portfolio",
   "scripts": {
     "build": "echo \"No build needed\""
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }
