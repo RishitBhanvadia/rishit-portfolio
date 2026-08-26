@@ -140,7 +140,9 @@
 	animation-duration: 180ms;
 	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 	animation-fill-mode: both;
-	animation-name: astroFadeIn; }</style></head> <body>  <div id="loading-cover" aria-hidden="true"></div> <script>
+	animation-name: astroFadeIn; }</style><script type="module">
+  import './analytics-bundle.js';
+</script></head> <body>  <div id="loading-cover" aria-hidden="true"></div> <script>
       (function () {
         function measure() {
           var el = document.createElement('div');
